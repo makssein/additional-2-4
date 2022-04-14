@@ -4,7 +4,10 @@ int main() {
     BMP image;
     image.readBMP("../in");
 
-    image.inverseFilter();
+    std::string word;
+    std::cin >> word;
+    image.encrypt(word);
+    image.decrypt();
 
     image.writeBMP("../out");
 

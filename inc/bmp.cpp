@@ -87,6 +87,423 @@ void BMP::inverseFilter() {
 
 
         }
-
-
 }
+
+void BMP::encrypt(std::string word) {
+    int space = 0;
+    for(int i = 0; i < word.length(); i++){
+        if(word[i] == 'A' || word[i] == 'a'){
+            m_pixels[6][space + 3].r++;
+            m_pixels[5][space + 2].r++;
+            m_pixels[4][space + 2].r++;
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 1].r++;
+            m_pixels[1][space + 0].r++;
+            m_pixels[0][space + 0].r++;
+
+            m_pixels[5][space + 4].r++;
+            m_pixels[4][space + 4].r++;
+            m_pixels[3][space + 5].r++;
+            m_pixels[2][space + 5].r++;
+            m_pixels[1][space + 6].r++;
+            m_pixels[0][space + 6].r++;
+
+            m_pixels[2][space + 2].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[2][space + 4].r++;
+        }
+
+        if(word[i] == 'B' || word[i] == 'b'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 1].r++;
+
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 1].r++;
+        }
+
+        if(word[i] == 'C' || word[i] == 'c'){
+            m_pixels[6][space + 3].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[5][space + 1].r++;
+            m_pixels[4][space + 0].r++;
+            m_pixels[3][space + 0].r++;
+            m_pixels[2][space + 0].r++;
+            m_pixels[1][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'D' || word[i] == 'c'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[5][space + 2].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 2].r++;
+            m_pixels[0][space + 1].r++;
+        }
+
+        if(word[i] == 'E' || word[i] == 'e'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 3].r++;
+
+            m_pixels[3][space + 1].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 3].r++;
+
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'F' || word[i] == 'f') {
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 3].r++;
+
+            m_pixels[3][space + 1].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 3].r++;
+        }
+
+        if(word[i] == 'G' || word[i] == 'g'){
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[2][space + 2].r++;
+        }
+
+        if(word[i] == 'H' || word[i] == 'h'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[3][space + 1].r++;
+            m_pixels[3][space + 2].r++;
+
+            m_pixels[6][space + 3].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'I' || word[i] == 'i'){
+            m_pixels[6][space].r++;
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 3].r++;
+
+            m_pixels[5][space + 1].r++;
+            m_pixels[4][space + 1].r++;
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 1].r++;
+            m_pixels[1][space + 1].r++;
+
+            m_pixels[0][space].r++;
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'J' || word[i] == 'j'){
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[6][space + 3].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 1].r++;
+        }
+
+        if(word[i] == 'K' || word[i] == 'k'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 2].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[0][space + 3].r++;
+
+            m_pixels[4][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[6][space + 3].r++;
+        }
+
+        if(word[i] == 'L' || word[i] == 'l'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'M' || word[i] == 'm'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[5][space + 1].r++;
+            m_pixels[4][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+
+            m_pixels[6][space + 4].r++;
+            m_pixels[5][space + 4].r++;
+            m_pixels[4][space + 4].r++;
+            m_pixels[3][space + 4].r++;
+            m_pixels[2][space + 4].r++;
+            m_pixels[1][space + 4].r++;
+            m_pixels[0][space + 4].r++;
+        }
+
+        if(word[i] == 'N' || word[i] == 'n'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[5][space + 1].r++;
+            m_pixels[4][space + 2].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[2][space + 3].r++;
+
+            m_pixels[6][space + 4].r++;
+            m_pixels[5][space + 4].r++;
+            m_pixels[4][space + 4].r++;
+            m_pixels[3][space + 4].r++;
+            m_pixels[2][space + 4].r++;
+            m_pixels[1][space + 4].r++;
+            m_pixels[0][space + 4].r++;
+        }
+
+        if(word[i] == 'O' || word[i] == 'o'){
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+        }
+
+        if(word[i] == 'P' || word[i] == 'p'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 1].r++;
+        }
+
+        if(word[i] == 'Q' || word[i] == 'q'){
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+
+            m_pixels[1][space + 4].r++;
+            m_pixels[0][space + 5].r++;
+
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+        }
+
+        if(word[i] == 'R' || word[i] == 'r'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+            m_pixels[0][space].r++;
+
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 1].r++;
+
+            m_pixels[2][space + 1].r++;
+            m_pixels[1][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+        }
+
+        if(word[i] == 'S' || word[i] == 's'){
+            m_pixels[6][space + 3].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 1].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space + 2].r++;
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+            m_pixels[0][space + 2].r++;
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 0].r++;
+        }
+
+        if(word[i] == 'T' || word[i] == 'T'){
+            m_pixels[6][space].r++;
+            m_pixels[6][space + 1].r++;
+            m_pixels[6][space + 2].r++;
+            m_pixels[6][space + 3].r++;
+
+            m_pixels[5][space + 1].r++;
+            m_pixels[4][space + 1].r++;
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 1].r++;
+            m_pixels[1][space + 1].r++;
+            m_pixels[0][space + 1].r++;
+        }
+
+        if(word[i] == 'U' || word[i] == 'u'){
+            m_pixels[0][space + 1].r++;
+            m_pixels[0][space + 2].r++;
+
+            m_pixels[5][space].r++;
+            m_pixels[4][space].r++;
+            m_pixels[3][space].r++;
+            m_pixels[2][space].r++;
+            m_pixels[1][space].r++;
+
+            m_pixels[5][space + 3].r++;
+            m_pixels[4][space + 3].r++;
+            m_pixels[3][space + 3].r++;
+            m_pixels[2][space + 3].r++;
+            m_pixels[1][space + 3].r++;
+        }
+
+        if(word[i] == 'V' || word[i] == 'v'){
+            m_pixels[6][space].r++;
+            m_pixels[5][space].r++;
+            m_pixels[4][space + 1].r++;
+            m_pixels[3][space + 1].r++;
+            m_pixels[2][space + 2].r++;
+            m_pixels[1][space + 2].r++;
+            m_pixels[0][space + 3].r++;
+
+            m_pixels[1][space + 4].r++;
+            m_pixels[2][space + 4].r++;
+            m_pixels[3][space + 5].r++;
+            m_pixels[4][space + 5].r++;
+            m_pixels[5][space + 6].r++;
+            m_pixels[6][space + 6].r++;
+        }
+        space += 8;
+    }
+}
+
+void BMP::decrypt() {
+    for(int i = 0; i < m_bmpInfo.Height; i++)
+        for(int j = 0; j < m_bmpInfo.Width; j++)
+            m_pixels[i][j].r *= 50;
+}
+
+

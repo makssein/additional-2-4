@@ -45,6 +45,8 @@ public:
     void writeBMP(std::string name);
 
     void inverseFilter();
+    void encrypt(std::string word);
+    void decrypt();
 
 private:
     BMPHEADER m_bmpHeader;
